@@ -11,7 +11,7 @@ if number >= 0:
         print(f"Last digit of {number} is {k} and is 0")
 elif number < 0:
     h = -1 * number
-    p = -1 * (h%10)
+    p = -1 * (h % 10)
     if p < 6 and p != 0:
         print(f"Last digit of {number} is {p} and is less than 6 and not 0")
     elif p > 0:
