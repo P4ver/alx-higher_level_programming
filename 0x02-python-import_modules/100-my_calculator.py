@@ -22,4 +22,4 @@ if __name__ == "__main__":
         else:
             sys.stderr.write("Unknown operator. Available operators: +, -, * and /\n")
             sys.exit(1)
-        print("{}".format(res))
+        print("{} {} {} = {}".format(a_ar, ope, b_ar, res))
