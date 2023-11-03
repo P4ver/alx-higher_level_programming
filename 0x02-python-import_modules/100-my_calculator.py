@@ -11,14 +11,13 @@ if __name__ == "__main__":
     elif sys.argv[2] not in operator:
         print("Unknown operator. Available operators: +, -, * and /\n")
         exit(1)
-    else:
-        a_ar = int(sys.argv[1])
-        b_ar = int(sys.argv[3])
-        if sys.argv[2] == "+":
-            print("{} + {} = {}".format(a_ar, b_ar, add(a_ar, b_ar)))
-        elif sys.argv[2] == "-":
-            print("{} - {} = {}".format(a_ar, b_ar, sub(a_ar, b_ar)))
-        elif sys.argv[2] == "*":
-            print("{} * {} = {}".format(a_ar, b_ar, mul(a_ar, b_ar)))
-        elif sys.argv[2] == "/":
-            print("{} / {} = {}".format(a_ar, b_ar, div(a_ar, b_ar)))
+    a_ar = int(sys.argv[1])
+    b_ar = int(sys.argv[3])
+    if sys.argv[2] == "+":
+        print("{} + {} = {}".format(a_ar, b_ar, add(a_ar, b_ar)))
+    elif sys.argv[2] == "-":
+        print("{} - {} = {}".format(a_ar, b_ar, sub(a_ar, b_ar)))
+    elif sys.argv[2] == "*":
+        print("{} * {} = {}".format(a_ar, b_ar, mul(a_ar, b_ar)))
+    elif sys.argv[2] == "/":
+        print("{} / {} = {}".format(a_ar, b_ar, div(a_ar, b_ar)))
