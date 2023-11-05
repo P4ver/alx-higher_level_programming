@@ -3,5 +3,5 @@ def no_c(my_string):
     y = list(my_string)
     for u in y[:]:
         if u == 'c' or u == 'C':
-            y.remove(u) 
+            y.remove(u)
     return "".join(y)
