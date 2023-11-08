@@ -8,7 +8,7 @@ def best_score(a_dictionary):
             if mx < k:
                 mx = k
         for j in r:
-            if a_dictionary[j] == 16:
+            if a_dictionary[j] == mx:
                 return j
     else:
         return
