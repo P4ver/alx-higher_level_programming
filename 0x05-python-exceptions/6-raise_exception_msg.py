@@ -1,2 +1,2 @@
-def raise_exception_msg(ms):
-    raise NameError(ms)
+def raise_exception_msg(msg):
+    raise NameError(msg)
