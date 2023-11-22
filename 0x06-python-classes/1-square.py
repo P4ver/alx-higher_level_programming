@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square mdl,"""
+"""Square mdl."""
 
 
 class Square:
@@ -11,4 +11,4 @@ class Square:
         Args:
             size: size of sqr.
         """
-        self.__seze = size
+        self.__size = size
