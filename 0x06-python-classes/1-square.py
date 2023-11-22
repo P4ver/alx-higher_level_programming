@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""square mdl,"""
+"""Square mdl,"""
 
 
 class Square:
-    """class representing square."""
+    """Representing class square."""
 
     def __init__(self, size):
         """Initializing new instance.
