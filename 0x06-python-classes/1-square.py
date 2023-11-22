@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" square _mdl,"""
+"""square mdl,"""
 
 
 class Square:
@@ -9,6 +9,6 @@ class Square:
         """Initializing new instance,
 
         Args:
-            size(int): size of sqr,
+            size: size of sqr.
         """
         self.__seze = size
