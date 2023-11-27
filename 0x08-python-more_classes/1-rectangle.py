@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module 1-rectangle."""
+"""
+Define class Rec.
+"""
 
 
 class Rectangle:
@@ -8,11 +10,8 @@ class Rectangle:
 
     Args:
         width: the width of rec.
-        height: the height of rec.
+        height: th height.
 
-    Raises:
-        ValueError: will be raised if heigh, width <0,
-        TypeError: will be raised if not int,
     """
 
     def __init__(self, width=0, height=0):
@@ -42,6 +41,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """Set new val."""
         if type(value) is not int or type(self.__width) is not int:
             raise TypeError("width must be an integer")
         if value < 0 or self.__width < 0:
@@ -60,6 +60,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """Set new val."""
         if type(value) is not int or type(self.__height) is not int:
             raise TypeError("height must be an integer")
         if value < 0 or self.__height < 0:
