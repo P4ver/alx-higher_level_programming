@@ -1,25 +1,43 @@
 #!/usr/bin/python3
-"""Module 1-rectangle"""
+"""Module 1-rectangle."""
 
 
 class Rectangle:
     """
-    A class rectangele.
+    Represent a rec.
 
     Args:
-        width: the width of rec,
+        width: the width of rec.
         height: the height of rec.
 
     Raises:
         ValueError: will be raised if heigh, width <0,
         TypeError: will be raised if not int,
     """
+
     def __init__(self, width=0, height=0):
+        """
+        Initialize a new Rec.
+
+        Args:
+            width: width of rec.
+            height: height of rec.
+
+        Returns:
+            None
+
+        """
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
+        """
+        Get the width.
+
+        Returns:
+            int: width.
+        """
         return self.__width
 
     @width.setter
@@ -32,6 +50,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """
+        Get the height.
+
+        Retruns:
+            int: the height.
+        """
         return self.__height
 
     @height.setter
