@@ -55,6 +55,7 @@ class Rectangle:
     def __str__(self):
         """returns and display the rec as '#'."""
         val = self.print_symbol
+
         if self.__height == 0 or self.__width == 0:
             return ""
         elif type(self.print_symbol) is list:
