@@ -49,8 +49,10 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """Display the rec as '#'."""
+        """returns and display the rec as '#'."""
         if self.__height == 0 or self.__width == 0:
             return ""
         else:
-            return '\n'.join(["#" * self.__width for q in range(self.__height)])
+            return '\n'.join(
+                    ["#" * self.__width for q in range(self.__height)]
+            )
