@@ -26,7 +26,7 @@ Test function:
 ::
 
 	>>> add_integer(69.5, 35.7)
-	105
+	104
 
 ::
 
@@ -41,3 +41,10 @@ Test function:
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(float('inf'), float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
