@@ -19,11 +19,18 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if not (isinstance(matrix, list) and all(type(rw) is list for rw in matrix) and all(type(el) in (int, float) for q in matrix for el in q)):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not (
+        isinstance(matrix, list) and
+        all(type(rw) is list for rw in matrix) and
+        all(type(el) in (int, float) for q in matrix for el in q)
+    ):
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+        )
     if not all(len(rw) == len(matrix[0]) for rw in matrix):
         raise TypeError("Each row of the matrix must have the same size")
-    return list(map(lambda row: list(map(lambda q: round(q / div, 2), row)), matrix))
+    row_ln = list(map(lambda q: round(q / div, 2), row))
+    return list(map(lambda row: row_ln, matrix))
 
 
 if __name__ == "__main__":
