@@ -62,6 +62,9 @@ class Rectangle:
             return '\n'.join(
                 [str(val) * self.__width for q in range(self.__height)]
             )
+        elif type(self.print_symbol) is int:
+            t_str = str(self.print_symbol)
+            return '\n'.join(t_str * self.__width for q in range(self.__height))
         else:
             return '\n'.join(
                 [val * self.__width for q in range(self.__height)]
