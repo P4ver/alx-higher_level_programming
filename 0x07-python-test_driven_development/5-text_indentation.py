@@ -5,7 +5,7 @@
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each of .  ? and ':'.
-    
+
     Args:
         text: string.
     Raises:
@@ -16,7 +16,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     cr_c = ""
-    mrk_sym = {'?','.',':'}
+    mrk_sym = {'?', '.', ':'}
     for q in text:
         cr_c += q
         if q in mrk_sym:
@@ -26,6 +26,7 @@ def text_indentation(text):
 
     if cr_c:
         print(cr_c.strip(), end="")
+
 
 if __name__ == '__main__':
     import doctest
