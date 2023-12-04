@@ -1,0 +1,19 @@
+	>>> MyList = __import__('1-my_list').MyList
+
+::
+
+	>>> myq = MyList()
+	>>> myq.print_sorted()
+	[]
+
+::
+
+        >>> myq = MyList([65, 89, 3])
+        >>> myq.print_sorted()
+	[3, 65, 89]
+
+::
+
+        >>> myq = MyList([78])
+        >>> myq.print_sorted()
+	[78]
