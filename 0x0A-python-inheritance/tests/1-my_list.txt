@@ -1,3 +1,4 @@
+Import function:
 	>>> MyList = __import__('1-my_list').MyList
 
 ::
@@ -17,3 +18,10 @@
         >>> myq = MyList([78])
         >>> myq.print_sorted()
 	[78]
+
+::
+
+	>>> my_list = MyList()
+	>>> my_list.append(53)
+	>>> my_list
+	[53]
