@@ -11,13 +11,13 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """funct that validate vlue."""
         if not type(value) is int:
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
-    """class rectangle ,"""
+    """class rectangle."""
     def __init__(self, width, height):
         """
         Initialize instanc,
