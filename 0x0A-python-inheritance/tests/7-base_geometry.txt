@@ -8,6 +8,10 @@
 
 area():
 	>>> bs_g = BaseGeometry()
+
+	>>> type(BaseGeometry.__dict__['area'])
+	<class 'function'>
+
 	>>> bs_g.area()
 	Traceback (most recent call last):
 	...
@@ -24,6 +28,9 @@ area():
         TypeError: area() takes 1 positional argument but 2 were given
 
 integer_validator():
+        >>> type(BaseGeometry.__dict__['integer_validator'])
+        <class 'function'>
+
 	>>> bs_g = BaseGeometry()
 	>>> bs_g.integer_validator("width", 860)
 	
