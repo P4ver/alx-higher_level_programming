@@ -1,7 +1,8 @@
-Import function:
+
+
 	>>> MyList = __import__('1-my_list').MyList
 
-        >>> myq = MyList([65, 89, 3])
+	>>> myq = MyList()
         >>> isinstance(myq, list)
 	True
 
