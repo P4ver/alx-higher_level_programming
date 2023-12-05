@@ -44,3 +44,12 @@ integer_validator():
         ...
 	TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
+        >>> bs_g.integer_validator("jrbhdi", (6,99))
+        Traceback (most recent call last):
+        ...
+	TypeError: jrbhdi must be an integer
+
+	>>> bs_g.integer_validator("jrbhdi", {6,99})
+        Traceback (most recent call last):
+        ...
+        TypeError: jrbhdi must be an integer
