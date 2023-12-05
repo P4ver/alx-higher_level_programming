@@ -1,0 +1,27 @@
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+::
+
+	>>> bs_g = BaseGeometry()
+	>>> bs_g.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+::
+
+	>>> bs_g = BaseGeometry()
+	>>> bs_g.integer_validator("width", 860)
+	>>> bs_g.integer_validator("myint", 1)
+	>>> bs_g.integer_validator("gat", "shc")
+	Traceback (most recent call last):
+	...
+	TypeError: gat must be an integer
+
+::
+
+	>>> bs_g.integer_validator("wid", -53)
+	Traceback (most recent call last):
+	...
+	ValueError: wid must be greater than 0
