@@ -8,6 +8,10 @@
 
 area():
 	>>> bs_g = BaseGeometry()
+	>>> type(bs_g.__class__.area())
+	Traceback (most recent call last):
+	...
+	TypeError: area() missing 1 required positional argument: 'self'
 
 	>>> type(BaseGeometry.__dict__['area'])
 	<class 'function'>
@@ -30,6 +34,11 @@ area():
 integer_validator():
         >>> type(BaseGeometry.__dict__['integer_validator'])
         <class 'function'>
+
+        >>> type(bs_g.__class__.integer_validator())
+        Traceback (most recent call last):
+        ...
+        TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
 	>>> bs_g = BaseGeometry()
 	>>> bs_g.integer_validator("width", 860)
