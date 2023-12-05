@@ -1,27 +1,46 @@
 
+
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-::
-
+area():
 	>>> bs_g = BaseGeometry()
 	>>> bs_g.area()
 	Traceback (most recent call last):
 	...
 	Exception: area() is not implemented
 
-::
 
+integer_validator():
 	>>> bs_g = BaseGeometry()
 	>>> bs_g.integer_validator("width", 860)
-	>>> bs_g.integer_validator("myint", 1)
+	
+	>>> bs_g.integer_validator("myint", 1.6)
+        Traceback (most recent call last):
+        ...
+	TypeError: myint must be an integer
+
 	>>> bs_g.integer_validator("gat", "shc")
 	Traceback (most recent call last):
 	...
 	TypeError: gat must be an integer
 
-::
-
 	>>> bs_g.integer_validator("wid", -53)
 	Traceback (most recent call last):
 	...
 	ValueError: wid must be greater than 0
+
+        >>> bs_g.integer_validator("wid")
+        Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bs_g.integer_validator()
+        Traceback (most recent call last):
+        ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+        >>> bs_g.integer_validator(1, 6, 9)
+        Traceback (most recent call last):
+        ...
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
