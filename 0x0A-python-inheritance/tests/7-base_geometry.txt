@@ -2,6 +2,9 @@
 
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+	>>> type(bs_g) == BaseGeometry
+	True
+
 area():
 	>>> bs_g = BaseGeometry()
 	>>> bs_g.area()
@@ -59,6 +62,16 @@ integer_validator():
 	TypeError: jrbhdi must be an integer
 
 	>>> bs_g.integer_validator("jrbhdi", {6,99})
+        Traceback (most recent call last):
+        ...
+        TypeError: jrbhdi must be an integer
+
+        >>> bs_g.integer_validator("jrbhdi", True)
+        Traceback (most recent call last):
+        ...
+        TypeError: jrbhdi must be an integer
+
+        >>> bs_g.integer_validator("jrbhdi", None)
         Traceback (most recent call last):
         ...
         TypeError: jrbhdi must be an integer
