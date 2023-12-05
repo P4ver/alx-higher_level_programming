@@ -53,3 +53,9 @@ integer_validator():
         Traceback (most recent call last):
         ...
         TypeError: jrbhdi must be an integer
+
+	>>> bs_g.integer_validator(None, 56)
+	
+
+	>>> bs_g.integer_validator("", 56)
+	
