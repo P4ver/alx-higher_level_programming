@@ -3,10 +3,7 @@
 
 
 class MyList(list):
-    def append(self, vl_apnd):
-        """this add elemnt to the list."""
-        super().append(vl_apnd)
-
+    """repsenting mylist clss."""
     def print_sorted(self):
         """methode sorts elemnt of the lst."""
         print(sorted(self))
