@@ -93,7 +93,12 @@ integer_validator():
         ...
         TypeError: jrbhdi must be an integer
 
-        >>> bs_g.integer_validator("jrbhdi", [5])
+        >>> bs_g.integer_validator("jrbhdi", 0)
+        Traceback (most recent call last):
+        ...
+        ValueError: jrbhdi must be greater than 0
+
+	>>> bs_g.integer_validator("jrbhdi", [5])
         Traceback (most recent call last):
         ...
         TypeError: jrbhdi must be an integer
