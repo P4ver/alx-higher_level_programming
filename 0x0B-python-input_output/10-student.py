@@ -9,13 +9,13 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """funct that retrieves a dict representation of a stdnt."""
         if attrs is None:
             return self.__dict__
         else:
-            fl={}
-            for at_tr in attrs:
-                if hasattr(self, at_tr):
-                    fl[at_tr] = getattr(self, at_tr)
-        return fl
+            fl = {}
+            for q, u in self.__dict__.items():
+                if q in attrs:
+                    fl[q] = u
+            return fl
