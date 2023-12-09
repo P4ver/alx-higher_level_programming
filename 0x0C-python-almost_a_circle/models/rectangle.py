@@ -71,3 +71,14 @@ class Rectangle(Base):
     def area(self):
         """clac the area ofrect."""
         return self.__width * self.__height
+
+    def display(self):
+        """displaying #hash."""
+        for u in range(self.__height):
+            print("#" * self.__width)
+
+    def __str__(self):
+        """representing rect."""
+        w_d = self.__width
+        h_g = self.__height
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {w_d}/{h_g}"
