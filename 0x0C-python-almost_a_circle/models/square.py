@@ -3,6 +3,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """representing 'sqr' class."""
     def __init__(self, size, x=0, y=0, id=None):
@@ -12,11 +13,15 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.__size
+        """get size of 'sqr'."""
+        return self.width
 
     @size.setter
     def size(self, val):
-        self.__size = val
+        """set the size of 'sqr'."""
+        self.width = val
+        self.height = val
 
     def __str__(self):
-        return f"[Square] ({self.id}) {super().x}/{super().y} - {self.__size}"
+        """str representation for sqr."""
+        return f"[{type(self).__name__}] ({self.id}) {super().x}/{super().y} - {self.width}"
