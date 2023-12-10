@@ -82,7 +82,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """representing rect."""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
+        return f"[{type(self).__name__}] ({self.id}) {self.__x}/{self.__y} - "\
             f"{self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
