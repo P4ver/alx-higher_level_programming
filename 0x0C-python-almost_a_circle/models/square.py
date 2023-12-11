@@ -23,9 +23,11 @@ class Square(Rectangle):
 
     def __str__(self):
         """str representation for sqr."""
-        return f"[{type(self).__name__}] ({self.id}) {super().x}/{super().y} - {self.width}"
+        return f"[{type(self).__name__}] ({self.id}) "\
+            f"{super().x}/{super().y} - {self.width}"
 
     def update(self, *args, **kwargs):
+        """update the val of sqr either *arg or **kwarg."""
         if args:
             if len(args) == 2:
                 self.size = args[1]
@@ -44,3 +46,8 @@ class Square(Rectangle):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        """return dict of 'sqr'."""
+        return {'id': self.id, 'x': self.x,
+                'size': self.size, 'y': self.y}

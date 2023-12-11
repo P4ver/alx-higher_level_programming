@@ -86,6 +86,7 @@ class Rectangle(Base):
             f"{self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """update the rect."""
         if len(args) == 1:
             self.id = args[0]
         if len(args) == 2:
@@ -106,3 +107,8 @@ class Rectangle(Base):
             self.__x = kwargs['x']
         if 'y' in kwargs:
             self.__y = kwargs['y']
+
+    def to_dictionary(self):
+        """return dict represent rect."""
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
