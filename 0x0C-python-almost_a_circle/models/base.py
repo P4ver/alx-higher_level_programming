@@ -12,11 +12,11 @@ class Base:
 
     def __init__(self, id=None):
         """Initializing."""
-        if id is None:
+        if id is not None:
+            self.id = id
+        else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-        else:
-            self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
