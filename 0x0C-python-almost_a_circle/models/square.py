@@ -24,7 +24,7 @@ class Square(Rectangle):
     def __str__(self):
         """str representation for sqr."""
         return f"[{type(self).__name__}] ({self.id}) "\
-            f"{super().x}/{super().y} - {self.width}"
+            f"{self.x}/{self.y} - {self.width}"
 
     def update(self, *args, **kwargs):
         """update the val of sqr either *arg or **kwarg."""

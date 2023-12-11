@@ -31,7 +31,7 @@ class Base:
         """method wirtes json str."""
         if list_objs is not None:
             n_lst_obj = [b.to_dictionary() for b in list_objs]
-        with open(f"{cls.__name__}.json", "w", encoding="utf-8") as pvr:
+        with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as pvr:
             pvr.write(cls.to_json_string(n_lst_obj))
 
     @staticmethod
