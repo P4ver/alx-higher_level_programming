@@ -40,10 +40,7 @@ class Base:
         if json_string is None or not json_string:
             return []
         else:
-            q = json_string[2:-2]
-            j = q.split('}, {')
-            j = [f'{{{d}}}' for d in j]
-            return [json.loads(d) for d in j]
+            return eval(json_string)
 
     @classmethod
     def create(cls, **dictionary):
