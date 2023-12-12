@@ -45,7 +45,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns inst with attrs"""
+        from models.rectangle import Rectangle
+        from models.square import Square
         if cls is Rectangle:
-            return Rectangle(1, 2).update(**dictionary)
+            Rectangle(1, 1).update(**dictionary)
+            return Rectangle(1, 1)
         elif cls is Square:
-            return Square(5).update(**dictionary)
+            Square(2).update(**dictionary)
+            return Square(2)
