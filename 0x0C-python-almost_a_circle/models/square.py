@@ -29,13 +29,14 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update the val of sqr either *arg or **kwarg."""
         if args:
+            self.id = args[0]
             if len(args) == 2:
                 self.size = args[1]
-            if len(args) == 3:
+            elif len(args) == 3:
+                self.size = args[1]
                 self.x = args[2]
             if len(args) == 4:
                 self.y = args[3]
-            self.id = args[0]
         if kwargs:
             if 'id' in kwargs:
                 self.id = kwargs['id']
