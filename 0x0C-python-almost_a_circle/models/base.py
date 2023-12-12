@@ -41,3 +41,11 @@ class Base:
             return []
         else:
             return eval(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns inst with attrs"""
+        if cls is Rectangle:
+            return Rectangle(1, 2).update(**dictionary)
+        elif cls is Square:
+            return Square(5).update(**dictionary)
