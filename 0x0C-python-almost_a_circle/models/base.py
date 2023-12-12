@@ -40,7 +40,7 @@ class Base:
         if json_string is None or not json_string:
             return []
         else:
-            return eval(json_string)
+            return json_string
 
     @classmethod
     def create(cls, **dictionary):
