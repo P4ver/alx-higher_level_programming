@@ -1,8 +1,8 @@
 #!/usr/bin/node
 const prc = require('process');
-const ms_g = 'No argument';
+const msg = 'No argument';
 if (prc.argv[2] === undefined) {
-  console.log(ms_g);
+  console.log(msg);
 } else {
   console.log(prc.argv[2]);
 }

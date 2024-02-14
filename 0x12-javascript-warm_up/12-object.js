@@ -1,8 +1,8 @@
 #!/usr/bin/node
-const my_obj = {
+const mobj = {
   type: 'object',
   value: 12
 };
-console.log(my_obj);
-my_obj.value = 89;
-console.log(my_obj);
+console.log(mobj);
+mobj.value = 89;
+console.log(mobj);

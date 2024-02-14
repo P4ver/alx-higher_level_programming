@@ -1,11 +1,11 @@
 #!/usr/bin/node
 const prc = require('process');
-let ms_g;
+let msg;
 if (prc.argv.length === 3) {
-  ms_g = 'Argument found';
+  msg = 'Argument found';
 } else if (prc.argv.length < 3) {
-  ms_g = 'No argument';
+  msg = 'No argument';
 } else {
-  ms_g = 'Arguments found';
+  msg = 'Arguments found';
 }
-console.log(ms_g);
+console.log(msg);
