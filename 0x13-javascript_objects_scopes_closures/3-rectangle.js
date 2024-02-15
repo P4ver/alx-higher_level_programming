@@ -6,6 +6,7 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     let m = 0;
     for (m; m < this.height; m++) {
