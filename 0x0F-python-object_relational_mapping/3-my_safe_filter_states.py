@@ -2,6 +2,8 @@
 """
 Script takes in an arg and displays all values in the states,
 """
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
     mysql_username = sys.argv[1]
