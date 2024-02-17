@@ -17,3 +17,5 @@ if __name__ == '__main__':
     s = cur.fetchall()
     for q in s:
         print(q)
+    cur.close()
+    db.close()
