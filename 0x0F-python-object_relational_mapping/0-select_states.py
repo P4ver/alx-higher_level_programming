@@ -13,4 +13,4 @@ if __name__ == '__main__':
 
     sts = cur.fetchall()
     for q in sts:
-        print(q) 
+        print(q)
