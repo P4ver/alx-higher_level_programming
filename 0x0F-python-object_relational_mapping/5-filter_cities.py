@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+argument and lists all cities of that state
+"""
 import sys
 import MySQLdb
 
