@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-script prints the first State obj from db
-"""
+"""Script prints the first State obj from db"""
 
 from model_state import Base, State
 from sqlalchemy import create_engine
