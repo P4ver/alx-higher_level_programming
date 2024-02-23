@@ -24,14 +24,12 @@ if __name__ == "__main__":
 
         res = cursor.fetchone()
 
-        print("Query executed successfully.")
-
-        if res:
-            print("Result:", res[0])
+        if res and res[0]:
+            print(res[0])
         else:
             print("No cities found for the specified state")
 
-    except MySQLdb.Error as e:
+    except Exception as e:
         print("An error occurred:", e)
 
     finally:
